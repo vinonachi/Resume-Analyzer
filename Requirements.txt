@@ -1,0 +1,12 @@
+flask
+requests
+sentence-transformers
+faiss-cpu
+PyPDF2
+python-docx
+werkzeug
+nltk
+tqdm
+numpy
+flask_cors
+google-generativeai

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Interview Questions Generator</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Resume Interview Questions</h1>
+        <p class="subtitle">Upload your resume and get AI-generated interview questions</p>
+
+        <!-- Upload Section -->
+        <div class="upload-section" id="uploadSection">
+            <div class="upload-icon">📄</div>
+            <p style="color: #666; margin-bottom: 15px;">
+                Drop your resume here or click to browse
+            </p>
+            <label for="fileInput" class="file-label">
+                Choose File
+            </label>
+            <input type="file" id="fileInput" accept=".pdf,.docx,.txt">
+            <div class="selected-file" id="selectedFile"></div>
+        </div>
+
+        <button class="upload-btn" id="uploadBtn" disabled>Upload Resume</button>
+
+        <div class="status" id="statusMessage"></div>
+        <div class="loader" id="loader"></div>
+
+        <!-- Generate Questions Section -->
+        <div class="generate-section" id="generateSection">
+            <div class="input-group">
+                <label for="questionCount">Number of Questions:</label>
+                <input type="number" id="questionCount" min="1" max="20" value="5">
+            </div>
+            <button class="generate-btn" id="generateBtn">Generate Interview Questions</button>
+        </div>
+
+        <!-- Questions Display Section -->
+        <div class="questions-section" id="questionsSection">
+            <h2 style="color: #333; margin-bottom: 20px;">Generated Questions:</h2>
+            <div id="questionsList"></div>
+        </div>
+
+        <button class="reset-btn" id="resetBtn" style="display: none;">Start Over</button>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
